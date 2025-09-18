@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>2-2 비교업체등록하기</title>
+<link rel="icon" href="assets/LOGO.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{ --wrapW:min(1200px, calc(100vw - 50px)); --ctrl-h:44px; }
+*{ box-sizing:border-box }
+body{ background:#0a0b0e; color:#eaf2ff; font-family:ui-sans-serif,-apple-system,'Noto Sans KR',Segoe UI,Roboto,Helvetica,Arial }
+.wrap{ width:var(--wrapW); margin:0 auto; padding:24px 16px; }
+.input,.btn{ height:var(--ctrl-h); border-radius:10px; box-sizing:border-box; }
+.input{ width:100%; padding:0 12px; background:#0e1116; border:1px solid #334155; color:#eaf2ff; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; padding:0 16px; background:#1f2937; border:1px solid #334155; color:#eaf2ff; cursor:pointer; }
+.btn:hover{ background:#243045 }
+.note{ color:#93adc9; font-size:12px }
+.small{ color:#c3d9ff; font-size:13px }
+.grid2{ display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px }
+.card{ background:#0e1116; border:1px solid #334155; border-radius:14px; }
+.badgelg{ display:inline-block; background:#111827; color:#eaf2ff; padding:6px 12px; border-radius:10px; font-weight:900 }
+.tabbtn{ display:flex; align-items:center; height:42px; border-radius:12px; border:1px solid #2b364a; background:linear-gradient(180deg,#0b1220,#0f1d37); color:#eaf2ff; font-weight:800; padding:0 14px; margin:8px 0 }
+.tabbtn.active{ border-color:#60a5fa; box-shadow:0 0 10px rgba(96,165,250,.35) inset }
+.leftcol{ width:280px }
+.rightcol{ flex:1 }
+.list-tight li{ margin:6px 0 }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="flex items-center justify-between mb-2">
+    <div class="text-2xl font-extrabold">업체등록시 1차내용</div>
+    <a class="badgelg" href="index.html#compare" style="text-decoration:none">← 메인으로</a>
+  </div>
+
+  <div class="flex gap-4">
+    <aside class="leftcol">
+      <div class="card p-3">
+        <div class="tabbtn active">2순위비교</div>
+        <div class="tabbtn">2-1 순위비교안내</div>
+        <div class="tabbtn">2-2 스포츠 , 카지노 , 슬롯</div>
+        <div class="tabbtn">2-3 업체 무료 등록 하기</div>
+      </div>
+    </aside>
+
+    <section class="rightcol">
+      <div class="card p-5 mb-4">
+        <div class="small mb-2">2순위비교</div>
+        <div class="text-slate-100 text-lg leading-relaxed">
+          <p>2-1 순위비교안내</p>
+          <p>2-2 대분류우측하단 16개 비교카테고리는 메인페이지에서 안내중이니 메인페이지로 포팅됨</p>
+          <p>2-3 업체 무료등록하기 페이지의 내용</p>
+      </div></div>
+
+      <div class="card p-5 mb-4">
+        <p class="text-slate-200 text-xl font-bold mb-2">순위비교등록을 원하시는 업체의 경우</p>
+        <p class="text-slate-200 mb-2">현재운영중인곳의 규정과 이벤트의 사실을 기반으로 작성해주시면됩니다.</p>
+
+        <form id="regF" class="grid gap-4">
+          <div class="grid2">
+            <div><label class="small">1 신규회원 10만원 첫입금이용시  지급되는 보너스 금액(만원단위)<br><span class="note">1만원이상 2 2만원이상 3 3만원이상 4 5만원이상</span></label><input class="input" name="b1" type="number" min="0" step="1" placeholder="예: 1,2,3,4"></div>
+            <div><label class="small">2 첫충전 보너스 % (1% 단위)</label><input class="input" name="b2" type="number" min="0" step="1"></div>
+            <div><label class="small">3 재충전 보너스 % (1% 단위)</label><input class="input" name="b3" type="number" min="0" step="1"></div>
+            <div><label class="small">4 주간 페이백 % (1% 단위)</label><input class="input" name="b4" type="number" min="0" step="1"></div>
+            <div><label class="small">5 당일 페이백 % (1% 단위)</label><input class="input" name="b5" type="number" min="0" step="1"></div>
+            <div><label class="small">6 생일회원쿠폰<br><span class="note">있다/없다</span></label><input class="input" name="b6" placeholder="있다 / 없다"></div>
+          </div>
+
+          <div class="grid2">
+            <div><label class="small">7 현재 서비스 중인 충전 방식<br><span class="note">1,1가지 2,2가지 3,3가지 4,4가지이상</span></label><input class="input" name="b7" placeholder="예: 2가지"></div>
+            <div><label class="small">8 (스포츠핸디캡체크)서비스중인 인플레이 제공사</label><input class="input" name="b8" placeholder="예: 제공사명"></div>
+          </div>
+
+          <div><label class="small">9 (2번의첫충전시 overroll)<br>첫충전 보너스 수령시 해야하는 롤링 %<br><span class="note">100%단위로 체크</span></label><input class="input" name="b9" type="number" step="100" min="0" placeholder="예: 100, 200, 300"></div>
+        </form>
+      </div>
+
+      <div class="card p-5 mb-4">
+        <div class="text-xl font-extrabold mb-2">업체등록양식 1차 추가부분</div>
+        <ul class="list-tight small">
+          <li>10 허위작성시 아카데미의 신뢰도에 지대한 영향을 미치므로 허위사실은 기재가 불가합니다</li>
+          <li>11 섹션에 따라 보너스혜택이 달리질수있는 모호한 설명이벤트인 경우 해당없다는 없는것으로 체크하셔야합니다</li>
+          <li>12 불이익 위반사항이 확인될경우 확인된 내용이 사실과 다르다고 판단될경우 패널티형식으로 15만원 상당의 패널티비용이 발생합니다. 패널티비용은 바로 제출해주시면 감사드릴입니다. 패널티비용은 전액 아카데미 회원분들께 사용됩니다. (단 패널티 비용은 업체영업주소가 불참사 패널티 비용으로 사용되는 이벤트에서는 제외됩니다.)</li>
+          <li>13 또한 아카데미의 판단에 의의가 있을경우 100명의에게물어봐 무료홍보코너(참여자선물비용20만원)를 통해 이의신청 가능합니다. 다수의 의견이 아카데미의 판단이 아닐경우 패널티를 부과되지않고 판단을실수한 아카데미에서 죄송한마음을 담아서 참여자선물비용(20만원상당)을 아카데미에서 처리해드리겠습니다.</li>
+          <li>잘못된 판단에 대해 사과드리는의미로 무료설문조사 참여자 분들께도 패널티금액이 높아지거나 하는부분은 전혀없습니다.</li>
+          <li>14 반대의 경우에도 패널티금액이 높아지거나 하는부분은 전혀없습니다.</li>
+        </ul>
+
+        <div class="grid2 mt-3">
+          <div>
+            <label class="small">15 위의 내용을 전부 확인 하셨나요?</label>
+            <select class="input" id="b15"><option>예</option><option>아니오</option></select>
+          </div>
+          <div>
+            <label class="small">16 텔레그램 연락처 와 작성하시는 분 층을 남겨주세요</label>
+            <input class="input" id="b16" placeholder="@handle 또는 연락처">
+          </div>
+        </div>
+
+        <div class="mt-4 flex gap-2">
+          <button class="btn" id="submitBtn" type="button">작성 완료</button>
+          <a class="btn" href="index.html#compare" style="text-decoration:none">메인으로 돌아가기</a>
+        </div>
+
+        <div id="doneMsg" class="text-slate-200 text-lg font-bold mt-6 hidden">
+          16번 까지 다 만든후<br>아래에 작성 완료 버튼 생성하고<br>완료버튼 클릭시<br>안내문구<br>작성 감사합니다.<br>확인후 기재하신곳으로 연락드리겠습니다.
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+document.getElementById('submitBtn').addEventListener('click', function(){
+  try{localStorage.setItem('register_submit_'+Date.now(),'1');}catch(e){}
+  document.getElementById('doneMsg').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
